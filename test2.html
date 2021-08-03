@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ICSTSD2021</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    html{
+      scroll-behavior: smooth;
+    }
+    #home{
+      width: 100%;
+      height: 100vh;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2.3em;
+    }
+    #about{
+      width: 100%;
+      height: 100vh;
+      background-color:beige;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.3em;
+    }
+    #reg{
+      width: 100%;
+      height: 130vh;
+      background-color:bisque;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.3em;
+    }
+    #contact{
+      width: 100%;
+      height: 100vh;
+      color:black;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.3em;
+      background-image: url('picture/bg-10.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .tdprop{
+      width: 10vw;
+    }
+    .para1{
+      position: relative;
+      top: -30vh;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
+    .responsive {
+      width: 100%;
+      height: 100vh;
+      filter:hue-rotate(-10deg);
+    }
+    hr
+    {
+      border:1px solid black;
+      width:15%;
+    }
+    .contactform{
+      background-color: white;
+      height: 60vh;
+      width:100%;
+      margin-top: -20vh;
+      box-shadow: 1vh 1vh 1vh rgb(101, 130, 139);
+      border-radius: 10px;
+      font-family: Nunito;
+    }
+    .contact1{
+
+    }
+    .c1{
+      position: relative;
+      width: 90%;
+      top: 3vh;
+      left: 10%;
+    }
+    .cu-ex{
+      background-color: rgba(245, 245, 220,0.5);
+    }
+    .cu{
+      position: relative;
+      top: 5vh;
+      
+      text-align: justify;
+      text-justify: inter-word;
+    }
+    .map{
+      border:0; 
+      width:100%; 
+      height:50vh;
+      box-shadow: 2vh 2vh 2vh grey;
+    }
+    .li1{
+      list-style: none;
+      font-size: 13px;
+      font-weight: bold;
+      position: relative;
+      top: -6vh;
+      left: 19%;
+    }
+    .li2{
+      list-style: none;
+      font-size: 13px;
+      font-weight: bold;
+      position: relative;
+      top: -6vh;
+      left: 8%;
+    }
+    @media (max-width: 1193px){
+      .para1{
+      position: relative;
+      top: -15vh;
+      font-size: 1.8rem;
+    }
+    .contactform{
+      margin-top: 0px;
+    }
+    #home{
+      padding: 7px;
+      
+    }
+    #about{
+      height: auto;
+    }
+    #reg{
+      height: auto;
+    }
+    #contact{
+      height: auto;
+    }
+    .cu{
+      position: relative;
+      top: 1vh;
+      left: 5%;
+    }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
+    <a class="navbar-brand" href="#"><img src="picture/logo.png" height="30" width="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item active">
+          <a class="nav-link home" href="#home" onclick="closeNav()">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link about" href="#about" onclick="closeNav()">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="committee.html" onclick="closeNav()">Committee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="paper.html" onclick="closeNav()">Call for paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="paper-submission.html" onclick="closeNav()">Paper Submission&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link reg" href="#reg" onclick="closeNav()">Registration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link contact" href="#contact" onclick="closeNav()">Contact us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Home Page-->
+  <div id="home">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="picture/bg-7.jpg" alt="Los Angeles" class="responsive">
+          <div class="carousel-caption">
+            <div class="para1"><center><b>International Conference on Smart Technologies for Sustainable Development ICSTSD2021<br>
+              Date: 28th – 29th October 2021</b></center></div>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="picture/bg-8.jpg" alt="Chicago" class="responsive">
+          <div class="carousel-caption">
+            <div class="para1"><center><b>International Conference on Smart Technologies for Sustainable Development ICSTSD2021<br>
+              Date: 28th – 29th October 2021</b></center></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="picture/bg-9.jpg" alt="New York" class="responsive">
+          <div class="carousel-caption">
+            <div class="para1"><center><b>International Conference on Smart Technologies for Sustainable Development ICSTSD2021<br>
+              Date: 28th – 29th October 2021</b></center></div>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="picture/bg-11.jpg" alt="New York" class="responsive" style="position: relative; top: 7vh;">
+          <div class="carousel-caption">
+            <div class="para1"><center><b>International Conference on Smart Technologies for Sustainable Development ICSTSD2021<br>
+              Date: 28th – 29th October 2021</b></center></div>
+          </div>   
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+
+  <div id="about">
+    <br><br>
+    <center>
+    <p style="font-size: 2em;">About</p>
+    <hr>
+  </center>
+    <div class="container">
+    <b>The International Conference on Smart Technologies for Sustainable Development (ICSTSD2021) is to be organized to address various issues of Smart Technologies to prosper the creation of intelligent solutions in future. The aim is to bring together worldwide leading researchers, developers, practitioners and educators interested in advancing the state of the art in various engineering disciplines for exchanging knowledge that encompasses a broad range of research area among various distinct communities. It is expected that researchers will bring new prospect for collaboration across disciplines and gain idea facilitating novel breakthrough. The theme for this conference is the inculcation of innovations in smart technologies for holistic development and implementation for societal benefit.
+      <br>
+      The conference will provide an exceptional platform to the researchers to meet and discuss the solutions of recent investigations, scientific results and various contemporary issues with people that actively involved in these evergreen fields. The 2-days conference commencing on 28th – 29th October 2021, will feature reputed keynote speakers, tutorials, Panel Discussions. All accepted and presented papers will be submitted to Scopus indexed journals for Publication.
+      <br>
+      ICSTSD2021 will no doubt be proven to be exciting and knowledge sharing platform. The organizing team cordially invite you to take part in this upcoming event and together we flourish it into a most memorable experience.
+      <br>
+    Date: 28th – 29th October 2021</b>
+  </div>
+</div>
+
+<div id="reg">
+  <br><br>
+  <center>
+  <p style="font-size: 2em;">Deadlines & Registration</p>
+  <hr>
+  </center>
+  <div class="container">
+    <b>Deadlines: </b>
+  <ol>
+    <li>Submission Ends: 31st August 2021</li>
+    <li>Paper acceptance notification to authors: 30 September 2021</li>
+    <li>Last Date of registration: 20 October 2021</li>
+    <li>Last Date of Copyright form Submission: 22 October 2021</li>
+    <li>Last Date of Camera-Ready Copy Submission: 22 October 2021</li>
+  </ol>
+<br>
+  <center><b><u>Publication in Scopus indexed Journal</u></b></center><br>
+  <b>Registration Fees: </b>
+  <ol>
+    <li> Presenter (Academics): Rs. 5000</li>
+    <li>Presenter (Industry): Rs. 10000</li>
+    <li>Author other than the presenter: Rs. 1000</li>
+    <li>Only participation: Rs. 500</li>
+  </ol>
+  <br>
+  <b>Bank Details: </b>
+  <ol>
+    <li>Bank Name: PUNJAB NATIONAL BANK </li>
+    <li>A/C No: 6619000100037177</li>
+    <li>A/C Name: JIS COLLEGE OF ENGINEERING, A/C ICAME 2015</li>
+    <li>MICR Code: 700024087</li>
+    <li>IFSC Coe: PUNB0661900</li>
+    <li>Branch: Kanchrapara</li>
+  </ol>
+</div>
+</div>
+
+<div id="contact">
+  <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.7460953568025!2d88.44556331491806!3d22.959576184985032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027730302f6e25%3A0xe50dfccae21e1fc!2sJIS%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1627304653975!5m2!1sen!2sin" allowfullscreen="" class="map" loading="lazy"></iframe>
+  </div>
+  <div class="container">
+    <div class="row contact1">
+      <div class="d-none d-md-block col-md-5">
+      
+      </div>
+      <div class="col-12 col-md-7">
+      <div class="contactform p-5">
+        <h2>Contact Us</h2>
+        <h5><table>
+          <tr>
+          <th class="tdprop">Name :</th>
+          <td>Indranath Sarkar<br>
+            Biswanath Sarkar
+          </td>
+          </tr><br>
+          <tr>
+            <th class="tdprop">Phone No :</th>
+            <td>123180703105<br>
+              123180703105
+            </td>
+            </tr><br>
+            <tr>
+              <th class="tdprop">Email ID :</th>
+              <td>a@b.com<br>
+                b@c.com
+              </td>
+              </tr><br>
+              <tr>
+                <th class="tdprop"><p data-toggle="modal" data-target="#myModal" style="cursor: pointer;"><b>Website Team</b></p></th>
+                
+                </tr><br>
+                  </table></h5>
+      </div>
+      </div>
+      </div>
+  </div>
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Website Team</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                Mr. Jit Chakraborty, TIC, Dept of CHEM <br>
+                Mr. Aniruddha Biswas, AP, Dept. of IT <br>
+                Subhratanu Saha, ECE 4th Year
+              </div>
+              
+              <!-- Modal footer -->
+              
+              
+            </div>
+          </div>
+        </div>
+          </span>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+
+</body>
+
+<!--JS Code-->
+  <script>
+    const url=window.location.href.split('#')[1];
+    url && ([...document.getElementsByClassName('active')].forEach((el)=>{
+      el.classList.remove('active');
+    }))
+    console.log(url);
+    document.getElementsByClassName(url)[0].classList.add('active');
+    
+
+    function closeNav() {
+      document.querySelector(".navbar-toggler").click();
+      /*const url=window.location.href.split('#')[1];
+      document.getElementsByClassName(url)[0].classList.add('active');
+      console.log();
+      */
+      var header = document.getElementById("navbarSupportedContent");
+      var btns = header.getElementsByClassName("nav-item");
+      for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    }
+    
+  </script>
+
+</html>
